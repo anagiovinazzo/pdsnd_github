@@ -13,8 +13,10 @@ This project, which originated from Udacity's Programming for Data Science with 
 * Project originally created and submitted on 5/4/2023.
 * Project and README.md updated on 6/15/2023.
 
-### Files used
-Include the files used
+## Files Used
+* chicago.csv - The dataset containing bikeshare information for Chicago, as provided by Udacity.
+* new_york_city.csv - The dataset containing bikeshare information for NYC, as provided by Udacity.
+* washington.csv - The dataset containing bikeshare information for Washington, as provided by Udacity.
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
