@@ -236,7 +236,7 @@ def user_stats(df):
         male_count = (df.Gender.values == 'Male').sum()
         female_count = (df.Gender.values == 'Female').sum()
         print ('There are {} male users and {} female users for your selected period.'.format(male_count, female_count))
-    except KeyError:
+    except (KeyError, AttributeError):
         print('Sorry, this data is unavailable for your current selection.')
 
     # Display earliest, most recent, and most common year of birth
@@ -248,7 +248,7 @@ def user_stats(df):
         print('The earliest user birth year is {}.'.format(min_birth_year))
         print('The most recent user birth year is {}.'.format(max_birth_year))
         print('The most common user birth year is {}.'.format(popular_birth_year))
-    except KeyError:
+    except (KeyError, AttributeError):
         print('Sorry, this data is unavailable for your current selection.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
