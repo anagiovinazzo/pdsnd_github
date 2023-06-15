@@ -230,8 +230,9 @@ def user_stats(df):
     # Display counts of gender
     print('\nHere\'s the breakdown of users by gender for your selected period overall:\n')
     try:
-        gender_count = df['Gender'].value_counts()
-        print(gender_count)
+        male_count = (df.Gender.values == 'Male').sum()
+        female_count = (df.Gender.values == 'Female').sum()
+        print ('There are {} male users and {} female users for your selected period.'.format(male_count, female_count))
     except KeyError:
         print('Sorry, this data is unavailable for your current selection.')
 
