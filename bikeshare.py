@@ -130,7 +130,6 @@ def time_stats(df):
     If the user has chosen All, then the wording will change to state the most popular month and day.
     """
 
-    print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
     # display the most common month or display the month the user selected.
@@ -169,7 +168,6 @@ def time_stats(df):
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
-    print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
     # display most commonly used start station
@@ -199,7 +197,6 @@ def convert_seconds(total_seconds):
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
-    print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
     # display total travel time in hours, minutes, seconds
@@ -219,14 +216,16 @@ def trip_duration_stats(df):
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
-    print('\nCalculating User Stats...\n')
     start_time = time.time()
 
     print('\nLet\'s take a look at the number of subscribers vs. customers:\n')
     # Display counts of user types
     try:
-        customer_count = df['User Type'].value_counts()
-        print(customer_count)
+        #customer_count = df['User Type'].value_counts()
+        #print(customer_count)
+        subscriber_count = (df['User Type'].values == 'Subscriber').sum()
+        customer_count = (df['User Type'].values == 'Customer').sum()
+        print('There are {} subscribers and {} customers for your selected period.'.format(subscriber_count, customer_count))
     except KeyError:
         print('Sorry, this data is unavailable for your current selection.')
         
@@ -234,9 +233,10 @@ def user_stats(df):
     # Display counts of gender
     print('\nHere\'s the breakdown of users by gender for your selected period overall:\n')
     try:
-        gender_count = df['Gender'].value_counts()
-        print(gender_count)
-    except KeyError:
+        male_count = (df.Gender.values == 'Male').sum()
+        female_count = (df.Gender.values == 'Female').sum()
+        print ('There are {} male users and {} female users for your selected period.'.format(male_count, female_count))
+    except (KeyError, AttributeError):
         print('Sorry, this data is unavailable for your current selection.')
 
     # Display earliest, most recent, and most common year of birth
@@ -248,7 +248,7 @@ def user_stats(df):
         print('The earliest user birth year is {}.'.format(min_birth_year))
         print('The most recent user birth year is {}.'.format(max_birth_year))
         print('The most common user birth year is {}.'.format(popular_birth_year))
-    except KeyError:
+    except (KeyError, AttributeError):
         print('Sorry, this data is unavailable for your current selection.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -256,6 +256,7 @@ def user_stats(df):
 
 def get_raw_data(df):
     """get the first 5 rows of raw data"""
+    pd.set_option('display.max_columns',200)
     x = 0
     y = 5
     ask_data = 'Would you like to see the first five rows of data for your selections? Select Yes or No.\n'
@@ -313,7 +314,7 @@ def main():
             while duration_metrics not in binary_options:
                 duration_metrics = input('Would you like to see trip duration statistics? Select Yes or No.\n').title()
                 if duration_metrics == 'Yes':
-                    print('\nExcellent! Here are some station usage metrics.')
+                    print('\nExcellent! Here are some trip duration metrics.')
                     trip_duration_stats(df)
                 elif duration_metrics == 'No':
                     print('Okay, let\'s move on.')
