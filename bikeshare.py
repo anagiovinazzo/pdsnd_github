@@ -256,6 +256,7 @@ def user_stats(df):
 
 def get_raw_data(df):
     """get the first 5 rows of raw data"""
+    pd.set_option('display.max_columns',200)
     x = 0
     y = 5
     ask_data = 'Would you like to see the first five rows of data for your selections? Select Yes or No.\n'
