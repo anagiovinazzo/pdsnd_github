@@ -23,6 +23,10 @@ This project, which originated from Udacity's Programming for Data Science with 
 * new_york_city.csv - The dataset containing bikeshare information for NYC, as provided by Udacity.
 * washington.csv - The dataset containing bikeshare information for Washington, as provided by Udacity.
 
+## Known Issues
+* washington.csv dataset does not contain data on user gender or birth year. The program accounts for the missing data and will skip calculations for those fields.
+* When user is asked if they want to see five lines/the next five lines of data, this will continue until past the data runs out. The user is unlikely to go through that much data, but if they do, they do need to actually reject the offer to see more data in order to continue.
+
 ## Credits
 * [Statology.org](https://www.statology.org/pandas-combine-two-columns/) - Used to double-check my work when writing code for combined start/end stations.
 * [SparkByExamples.com](https://sparkbyexamples.com/pandas/get-first-n-rows-of-pandas/) - Used the i.loc[:n] method explained here and supplemented it with a While loop to allow the user to get lines of raw data.
