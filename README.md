@@ -1,6 +1,3 @@
-### Date created
-Include the date you created this project and README file.
-
 # US Bikeshare Data Exploration with Python
 
 ## Project Overview
@@ -11,6 +8,10 @@ This project, which originated from Udacity's Programming for Data Science with 
 * Station usage metrics (e.g. most popular start and end stations)
 * Trip duration statistics (e.g. length of total travel time, length of average travel time)
 * User statistics (e.g. subscriber vs. customer, gender, birth year)
+
+### Date created
+* Project originally created and submitted on 5/4/2023.
+* Project and README.md updated on 6/15/2023.
 
 ### Files used
 Include the files used
