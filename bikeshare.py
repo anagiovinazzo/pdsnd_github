@@ -313,7 +313,7 @@ def main():
             while duration_metrics not in binary_options:
                 duration_metrics = input('Would you like to see trip duration statistics? Select Yes or No.\n').title()
                 if duration_metrics == 'Yes':
-                    print('\nExcellent! Here are some station usage metrics.')
+                    print('\nExcellent! Here are some trip duration metrics.')
                     trip_duration_stats(df)
                 elif duration_metrics == 'No':
                     print('Okay, let\'s move on.')
