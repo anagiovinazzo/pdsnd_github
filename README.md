@@ -9,7 +9,7 @@ This project, which originated from Udacity's Programming for Data Science with 
 * Trip duration statistics (e.g. length of total travel time, length of average travel time)
 * User statistics (e.g. subscriber vs. customer, gender, birth year)
 
-### Date created
+### Date Created and Date of Updates
 * Project originally created and submitted on 5/4/2023.
 * Project and README.md updated on 6/15/2023.
 
