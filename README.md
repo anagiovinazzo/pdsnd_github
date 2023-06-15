@@ -18,6 +18,12 @@ This project, which originated from Udacity's Programming for Data Science with 
 * new_york_city.csv - The dataset containing bikeshare information for NYC, as provided by Udacity.
 * washington.csv - The dataset containing bikeshare information for Washington, as provided by Udacity.
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+## Credits
+* [Statology.org](https://www.statology.org/pandas-combine-two-columns/) - Used to double-check my work when writing code for combined start/end stations.
+* [SparkByExamples.com](https://sparkbyexamples.com/pandas/get-first-n-rows-of-pandas/) - Used the i.loc[:n] method explained here and supplemented it with a While loop to allow the user to get lines of raw data.
+* [StuffThatSpins.com](https://stuffthatspins.com/stuff/ASCII-Art-bicycle-bike-cycling.html) - Borrowed ASCII art of cyclists to create the separators in my code to make the program more visually interesting.
+* [Marsja.se](https://www.marsja.se/pandas-count-occurrences-in-column-unique-values/) - Referenced this site to learn to use df['Column'].value_counts() to create the customer counts and gender counts for the user_stats(df) function. 
+* [Pandas Documentation](http://pandas.pydata.org/pandas-docs/stable/)
+* [Udacity](https://www.udacity.com/) - Programming for Data Science with Python course.
+* [Dillinger](https://dillinger.io/) - For README formatting.
 
