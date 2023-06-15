@@ -221,8 +221,11 @@ def user_stats(df):
     print('\nLet\'s take a look at the number of subscribers vs. customers:\n')
     # Display counts of user types
     try:
-        customer_count = df['User Type'].value_counts()
-        print(customer_count)
+        #customer_count = df['User Type'].value_counts()
+        #print(customer_count)
+        subscriber_count = (df['User Type'].values == 'Subscriber').sum()
+        customer_count = (df['User Type'].values == 'Customer').sum()
+        print('There are {} subscribers and {} customers for your selected period.'.format(subscriber_count, customer_count))
     except KeyError:
         print('Sorry, this data is unavailable for your current selection.')
         
