@@ -14,7 +14,7 @@ This project, which originated from Udacity's Programming for Data Science with 
 * Project and README.md updated on 6/15/2023.
 
 ## Built With
-* [Python 3.11.3](https://www.python.org/} - The programming language used to develop this project.
+* [Python 3.11.3](https://www.python.org/) - The programming language used to develop this project.
 * [pandas](https://pandas.pydata.org/) - The main library used in this project to access information from .csv files.
 * [time](https://docs.python.org/2/library/time.html) - A library used in this project to calculate processing time for each calculation.
 
